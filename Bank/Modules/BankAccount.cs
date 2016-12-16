@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Bank.Modules
 {
     public class BankAccount
     {
-        public BankAccount()
+        public BankAccount(int amount)
         {
-            
+            Balance = amount;
         }
 
         /// <summary>
@@ -24,7 +20,7 @@ namespace Bank.Modules
         /// <param name="money">금액</param>
         public void Withdraw(int amount)
         {
-            if (Balance > amount)
+            if (Balance < amount)
             {
                 throw new ArgumentOutOfRangeException(nameof(amount));
             }
