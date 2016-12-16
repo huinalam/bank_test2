@@ -15,7 +15,7 @@ namespace Bank.Test
         public void Bank_출금_제대로되는지_확인()
         {
             // Arrange
-            int balance = 100;
+            int balance = 200;
             int amount = 100;
             var bank = new BankAccount(balance);
             int expected = 0;
